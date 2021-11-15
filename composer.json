@@ -1,0 +1,44 @@
+{
+    "name": "uky/uky_platform_dev_tools",
+    "description": "This package will contain all development tools needed for the uky web platform.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "University of Kentucky Webcom",
+            "email": "universitywebservices@l.uky.edu"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://satis.uky.dev"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+            {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "drupal/stage_file_proxy": "^1.1",
+        "drupal/devel": "^4.0"
+        },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "drupal-scaffold": {
+            "file-mapping": {
+                "[project-root]/.ddev": ".ddev",
+                "[project-root]/.theia": ".theia",
+                "[project-root]/.vscode": ".vscode",
+                "[project-root]/.gitpood.Dockerfile": ".gitpod.Dockerfile",
+                "[project-root]/.gitpod.yml": ".gitpod.yml",
+                "[web-root]/sites/default/settings.ddev.php": "settings.ddev.php"
+            }
+        }
+    }
+}
