@@ -24,8 +24,7 @@
         }
     ],
     "require": {
-        "drupal/stage_file_proxy": "^1.1",
-        "drupal/devel": "^4.0"
+
         },
     "minimum-stability": "dev",
     "prefer-stable": true,
