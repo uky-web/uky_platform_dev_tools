@@ -1,5 +1,5 @@
 {
-    "name": "uky/uky_platform_dev_tools",
+    "name": "uky-web/uky_platform_dev_tools",
     "description": "This package will contain all development tools needed for the uky web platform.",
     "type": "project",
     "license": "GPL-2.0-or-later",
