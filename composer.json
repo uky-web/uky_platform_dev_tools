@@ -1,6 +1,11 @@
 {
     "name": "uky-web/uky_platform_dev_tools",
+<<<<<<< HEAD
     "description": "This package will contain all development tools needed for the uky web platform.",
+=======
+    "description": "This is used to install the development tools for the uky web platform.",
+    "type": "uky-dev-tools",
+>>>>>>> 763237f (tried using composer init to build the package first and then modified the composer.json)
     "license": "GPL-2.0-or-later",
     "authors": [
         {
@@ -22,11 +27,25 @@
             "url": "https://asset-packagist.org"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "UkyWeb\\UkyPlatformDevTools\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
+<<<<<<< HEAD
         "drupal/core-composer-scaffold": "^8.8.0"
         },
     "minimum-stability": "dev",
     "prefer-stable": true,
+=======
+        "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/stage_file_proxy": "^1.1",
+        "drupal/devel": "^4.0"
+    },
+>>>>>>> 763237f (tried using composer init to build the package first and then modified the composer.json)
     "extra": {
         "drupal-scaffold": {
             "file-mapping": {
