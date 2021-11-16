@@ -24,7 +24,7 @@
         }
     ],
     "require": {
-
+        "drupal/core-composer-scaffold": "^8.8.0"
         },
     "minimum-stability": "dev",
     "prefer-stable": true,
