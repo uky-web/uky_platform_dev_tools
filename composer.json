@@ -30,9 +30,12 @@
     "extra": {
         "drupal-scaffold": {
             "file-mapping": {
-                "[project-root]/.ddev": ".ddev",
-                "[project-root]/.theia": ".theia",
-                "[project-root]/.vscode": ".vscode",
+                "[project-root]/.ddev/config.yaml": ".ddev/config.yaml",
+                "[project-root]/.ddev/gitpod-setup-ddev.sh": ".ddev/gitpod-setup-ddev.sh",
+                "[project-root]/.ddev/run-phpstorm.sh": ".ddev/run-phpstorm.sh",
+                "[project-root]/.ddev/uk-site-install.sh": ".ddev/uk-site-install.sh",
+                "[project-root]/.theia/launch.json": ".theia/launch.json",
+                "[project-root]/.vscode/launch.json": ".vscode/launch.json",
                 "[project-root]/.gitpood.Dockerfile": ".gitpod.Dockerfile",
                 "[project-root]/.gitpod.yml": ".gitpod.yml",
                 "[web-root]/sites/default/settings.ddev.php": "settings.ddev.php"
