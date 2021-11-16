@@ -38,7 +38,7 @@
     "extra": {
         "drupal-scaffold": {
             "file-mapping": {
-                "[project-root]/.ddev/config.yaml": ".ddev/config.yaml",
+                "../../../.ddev/config.yaml": ".ddev/config.yaml",
                 "[project-root]/.ddev/gitpod-setup-ddev.sh": ".ddev/gitpod-setup-ddev.sh",
                 "[project-root]/.ddev/run-phpstorm.sh": ".ddev/run-phpstorm.sh",
                 "[project-root]/.ddev/uk-site-install.sh": ".ddev/uk-site-install.sh",
