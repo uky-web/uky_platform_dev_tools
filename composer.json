@@ -54,7 +54,9 @@
                 "[project-root]/.lando/scripts/lando-install.sh": "assets/.lando/scripts/lando-install.sh",
                 "[project-root]/.lando.yml": "assets/.lando.yml",
                 "[web-root]/sites/default/settings.ddev.php": "assets/settings.ddev.php",
-                "[web-root]/sites/default/settings.lando.php": "assets/settings.lando.php"
+                "[web-root]/sites/default/settings.lando.php": "assets/settings.lando.php",
+                "[web-root]/sites/default/default.settings.php": "assets/default.settings.php",
+                "[web-root]/sites/development.services.yml": "assets/development.services.yml"
             }
         }
     }
