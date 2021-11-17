@@ -1,48 +1,5 @@
 {
-    "name": "drupal/uky_platform_dev_tools",
-    "description": "This is used to install the development tools for the uky web platform.",
-    "type": "uky-dev-tools",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "University of Kentucky Webcom",
-            "email": "universitywebservices@l.uky.edu"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://satis.uky.dev"
-        },
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-            {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "drupal/stage_file_proxy": "^1.1",
-        "drupal/devel": "^4.0"
-    },
-    "scripts": {
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
-    },
+    "name": "uky-web/uky_platform_dev_tools",
     "extra": {
         "drupal-scaffold": {
             "file-mapping": {
