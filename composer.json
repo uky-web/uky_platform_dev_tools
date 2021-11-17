@@ -48,7 +48,7 @@
                 "[project-root]/.ddev/uk-site-install.sh": "assets/.ddev/uk-site-install.sh",
                 "[project-root]/.theia/launch.json": "assets/.theia/launch.json",
                 "[project-root]/.vscode/launch.json": "assets/.vscode/launch.json",
-                "[project-root]/.gitpood.Dockerfile": "assets/.gitpod.Dockerfile",
+                "[project-root]/.gitpod.Dockerfile": "assets/.gitpod.Dockerfile",
                 "[project-root]/.gitpod.yml": "assets/.gitpod.yml",
                 "[web-root]/sites/default/settings.ddev.php": "assets/settings.ddev.php"
             }
