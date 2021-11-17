@@ -50,7 +50,11 @@
                 "[project-root]/.vscode/launch.json": "assets/.vscode/launch.json",
                 "[project-root]/.gitpod.Dockerfile": "assets/.gitpod.Dockerfile",
                 "[project-root]/.gitpod.yml": "assets/.gitpod.yml",
-                "[web-root]/sites/default/settings.ddev.php": "assets/settings.ddev.php"
+                "[project-root]/.lando/config/php.ini": "assets/.lando/config/php.ini",
+                "[project-root]/.lando/scripts/lando-install.sh": "assets/.lando/scripts/lando-install.sh",
+                "[project-root]/.lando.yml": "assets/.lando.yml",
+                "[web-root]/sites/default/settings.ddev.php": "assets/settings.ddev.php",
+                "[web-root]/sites/default/settings.lando.php": "assets/settings.lando.php"
             }
         }
     }
