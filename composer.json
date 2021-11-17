@@ -1,5 +1,5 @@
 {
-    "name": "uky-web/uky_platform_dev_tools",
+    "name": "drupal/uky_platform_dev_tools",
     "description": "This is used to install the development tools for the uky web platform.",
     "type": "uky-dev-tools",
     "license": "GPL-2.0-or-later",
@@ -26,7 +26,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/stage_file_proxy": "^1.1",
         "drupal/devel": "^4.0"
     },
