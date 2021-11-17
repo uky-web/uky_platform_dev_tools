@@ -23,11 +23,6 @@
             "url": "https://asset-packagist.org"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "UkyWeb\\UkyPlatformDevTools\\": "src/"
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -47,15 +42,15 @@
     "extra": {
         "drupal-scaffold": {
             "file-mapping": {
-                "[project-root]/.ddev/config.yaml": "src/.ddev/config.yaml",
-                "[project-root]/.ddev/gitpod-setup-ddev.sh": "src/.ddev/gitpod-setup-ddev.sh",
-                "[project-root]/.ddev/run-phpstorm.sh": "src/.ddev/run-phpstorm.sh",
-                "[project-root]/.ddev/uk-site-install.sh": "src/.ddev/uk-site-install.sh",
-                "[project-root]/.theia/launch.json": "src/.theia/launch.json",
-                "[project-root]/.vscode/launch.json": "src/.vscode/launch.json",
-                "[project-root]/.gitpood.Dockerfile": "src/.gitpod.Dockerfile",
-                "[project-root]/.gitpod.yml": "src/.gitpod.yml",
-                "[web-root]/sites/default/settings.ddev.php": "src/settings.ddev.php"
+                "[project-root]/.ddev/config.yaml": "assets/.ddev/config.yaml",
+                "[project-root]/.ddev/gitpod-setup-ddev.sh": "assets/.ddev/gitpod-setup-ddev.sh",
+                "[project-root]/.ddev/run-phpstorm.sh": "assets/.ddev/run-phpstorm.sh",
+                "[project-root]/.ddev/uk-site-install.sh": "assets/.ddev/uk-site-install.sh",
+                "[project-root]/.theia/launch.json": "assets/.theia/launch.json",
+                "[project-root]/.vscode/launch.json": "assets/.vscode/launch.json",
+                "[project-root]/.gitpood.Dockerfile": "assets/.gitpod.Dockerfile",
+                "[project-root]/.gitpod.yml": "assets/.gitpod.yml",
+                "[web-root]/sites/default/settings.ddev.php": "assets/settings.ddev.php"
             }
         }
     }
