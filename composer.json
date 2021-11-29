@@ -124,7 +124,7 @@
                     "gitignore": false
                 },
                 "[web-root]/sites/development.services.yml": {
-                    "path": "assets/development.services.yml"
+                    "path": "assets/development.services.yml",
                     "overwrite": true,
                     "gitignore": false
                 }
