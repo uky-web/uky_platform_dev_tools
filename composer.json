@@ -53,66 +53,52 @@
     "extra": {
         "drupal-scaffold": {
             "gitignore": false,
+            "overwrite": true,
             "file-mapping": {
                 "[project-root]/.ddev/config.yaml": {
-                    "path": "assets/.ddev/config.yaml",
-                    "overwrite": true
+                    "path": "assets/.ddev/config.yaml"
                 },
                 "[project-root]/.ddev/gitpod-setup-ddev.sh": {
-                    "path": "assets/.ddev/gitpod-setup-ddev.sh",
-                    "overwrite": true
+                    "path": "assets/.ddev/gitpod-setup-ddev.sh"
                 },
                 "[project-root]/.ddev/run-phpstorm.sh": {
-                    "path": "assets/.ddev/run-phpstorm.sh",
-                    "overwrite": true
+                    "path": "assets/.ddev/run-phpstorm.sh"
                 },
                 "[project-root]/.ddev/uk-site-install.sh": {
-                    "path": "assets/.ddev/uk-site-install.sh",
-                    "overwrite": true
+                    "path": "assets/.ddev/uk-site-install.sh"
                 },
                 "[project-root]/.theia/launch.json": {
-                    "path": "assets/.theia/launch.json",
-                    "overwrite": true
+                    "path": "assets/.theia/launch.json"
                 },
                 "[project-root]/.vscode/launch.json": {
-                    "path": "assets/.vscode/launch.json",
-                    "overwrite": true
+                    "path": "assets/.vscode/launch.json"
                 },
                 "[project-root]/.gitpod.Dockerfile": {
-                    "path": "assets/.gitpod.Dockerfile",
-                    "overwrite": true
+                    "path": "assets/.gitpod.Dockerfile"
                 },
                 "[project-root]/.gitpod.yml": {
-                    "path": "assets/.gitpod.yml",
-                    "overwrite": true
+                    "path": "assets/.gitpod.yml"
                 },
                 "[project-root]/.lando/config/php.ini": {
-                    "path": "assets/.lando/config/php.ini",
-                    "overwrite": true
+                    "path": "assets/.lando/config/php.ini"
                 },
                 "[project-root]/.lando/scripts/lando-install.sh": {
-                    "path": "assets/.lando/scripts/lando-install.sh",
-                    "overwrite": true
+                    "path": "assets/.lando/scripts/lando-install.sh"
                 },
                 "[project-root]/.lando.yml": {
-                    "path": "assets/.lando.yml",
-                    "overwrite": true
+                    "path": "assets/.lando.yml"
                 },
                 "[web-root]/sites/default/settings.ddev.php": {
-                    "path": "assets/settings.ddev.php",
-                    "overwrite": true
+                    "path": "assets/settings.ddev.php"
                 },
                 "[web-root]/sites/default/settings.lando.php": {
-                    "path": "assets/settings.lando.php",
-                    "overwrite": true
+                    "path": "assets/settings.lando.php"
                 },
                 "[web-root]/sites/default/default.settings.php": {
-                    "path": "assets/default.settings.php",
-                    "overwrite": true
+                    "path": "assets/default.settings.php"
                 },
                 "[web-root]/sites/development.services.yml": {
-                    "path": "assets/development.services.yml",
-                    "overwrite": true
+                    "path": "assets/development.services.yml"
                 }
             }
         }
