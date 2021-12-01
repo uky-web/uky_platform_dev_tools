@@ -482,8 +482,8 @@ if ($settings['hash_salt']) {
  *
  * Value should be in PHP Octal Notation, with leading zero.
  */
-# $settings['file_chmod_directory'] = 0775;
-# $settings['file_chmod_file'] = 0664;
+ $settings['file_chmod_directory'] = 0775;
+ $settings['file_chmod_file'] = 0664;
 
 /**
  * Public file base URL:
@@ -779,15 +779,18 @@ $settings['entity_update_backup'] = TRUE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
- if (getenv('DRUPAL_ENV') == 'lando') {
+
+# settings.local.php is not used for the UKY Web Platform.  Development should be done using ddev/gitpod or lando locally.
+#if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+#  include $app_root . '/' . $site_path . '/settings.local.php';
+#}
+
+# settings.lando.php include.
+if (getenv('DRUPAL_ENV') == 'lando') {
    include $app_root . '/' . $site_path . '/settings.lando.php';
  }
 
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-    include $app_root . '/' . $site_path . '/settings.local.php';
-}
-
- /* Including the settings.ddev.php if available...  */
+# settings.ddev.php include.
  if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {
   include __DIR__ . '/settings.ddev.php';
 }

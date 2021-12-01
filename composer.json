@@ -55,6 +55,18 @@
             "gitignore": false,
             "overwrite": true,
             "file-mapping": {
+                "[web-root]/sites/default/default.settings.php": {
+                    "path": "assets/default.settings.php"
+                },
+                "[web-root]/sites/development.services.yml": {
+                    "path": "assets/development.services.yml"
+                },
+                "[project-root]/.gitpod.Dockerfile": {
+                    "path": "assets/.gitpod.Dockerfile"
+                },
+                "[project-root]/.gitpod.yml": {
+                    "path": "assets/.gitpod.yml"
+                },
                 "[project-root]/.ddev/config.yaml": {
                     "path": "assets/.ddev/config.yaml"
                 },
@@ -73,11 +85,11 @@
                 "[project-root]/.vscode/launch.json": {
                     "path": "assets/.vscode/launch.json"
                 },
-                "[project-root]/.gitpod.Dockerfile": {
-                    "path": "assets/.gitpod.Dockerfile"
+                "[web-root]/sites/default/settings.ddev.php": {
+                    "path": "assets/settings.ddev.php"
                 },
-                "[project-root]/.gitpod.yml": {
-                    "path": "assets/.gitpod.yml"
+                "[web-root]/sites/default/settings.lando.php": {
+                    "path": "assets/settings.lando.php"
                 },
                 "[project-root]/.lando/config/php.ini": {
                     "path": "assets/.lando/config/php.ini"
@@ -87,18 +99,6 @@
                 },
                 "[project-root]/.lando.yml": {
                     "path": "assets/.lando.yml"
-                },
-                "[web-root]/sites/default/settings.ddev.php": {
-                    "path": "assets/settings.ddev.php"
-                },
-                "[web-root]/sites/default/settings.lando.php": {
-                    "path": "assets/settings.lando.php"
-                },
-                "[web-root]/sites/default/default.settings.php": {
-                    "path": "assets/default.settings.php"
-                },
-                "[web-root]/sites/development.services.yml": {
-                    "path": "assets/development.services.yml"
                 }
             }
         }
