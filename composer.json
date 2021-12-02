@@ -43,12 +43,12 @@
     "scripts": {
         "post-install-cmd": [
             "@composer drupal:scaffold",
-            "permissionsfix.sh",
+            "bash permissionsfix.sh",
 	    "..."
         ],
         "post-update-cmd": [
             "@composer drupal:scaffold",
-            "permissionsfix.sh",
+            "bash permissionsfix.sh",
 	    "..."
         ]
     },
