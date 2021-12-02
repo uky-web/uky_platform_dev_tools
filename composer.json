@@ -43,12 +43,16 @@
     "scripts": {
         "post-install-cmd": [
             "@composer drupal:scaffold",
-            "bash permissionsfix.sh",
+            "chmod 755 ../../../.ddev/gitpod-setup-ddev.sh",
+            "chmod 755 ../../../.ddev/run-phpstorm.sh",
+            "chmod 755 ../../../.ddev/uk-site-install.sh",
 	    "..."
         ],
         "post-update-cmd": [
             "@composer drupal:scaffold",
-            "bash permissionsfix.sh",
+            "chmod 755 ../../../.ddev/gitpod-setup-ddev.sh",
+            "chmod 755 ../../../.ddev/run-phpstorm.sh",
+            "chmod 755 ../../../.ddev/uk-site-install.sh",
 	    "..."
         ]
     },
