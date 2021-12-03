@@ -43,17 +43,18 @@
     "scripts": {
         "post-install-cmd": [
             "@composer drupal:scaffold",
-            "chmod 755 ../../../.ddev/gitpod-setup-ddev.sh",
-            "chmod 755 ../../../.ddev/run-phpstorm.sh",
-            "chmod 755 ../../../.ddev/uk-site-install.sh",
+            "@permission-fix",
 	    "..."
         ],
         "post-update-cmd": [
             "@composer drupal:scaffold",
+            "@permission-fix",
+	    "..."
+        ],
+        "permission-fix": [
             "chmod 755 ../../../.ddev/gitpod-setup-ddev.sh",
             "chmod 755 ../../../.ddev/run-phpstorm.sh",
-            "chmod 755 ../../../.ddev/uk-site-install.sh",
-	    "..."
+            "chmod 755 ../../../.ddev/uk-site-install.sh"
         ]
     },
     "extra": {
