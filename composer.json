@@ -39,6 +39,14 @@
         "phpunit/phpunit": "~4.8",
         "symfony/css-selector": "~2.8"
     },
+    "scripts": {
+        "post-install-cmd": [
+            "@composer drupal:scaffold"
+            ],
+        "post-update-cmd": [
+            "@composer drupal:scaffold"
+        ]
+    },
     "extra": {
         "drupal-scaffold": {
             "gitignore": false,
@@ -91,20 +99,5 @@
                 }
             }
         }
-    },
-    "scripts": {
-    "post-install-cmd": [
-        "@composer drupal:scaffold",
-        "@permission-fix"
-        ],
-        "post-update-cmd": [
-            "@composer drupal:scaffold",
-            "@permission-fix"
-        ],
-        "permission-fix": [
-            "chmod 755 ../../../.ddev/gitpod-setup-ddev.sh",
-            "chmod 755 ../../../.ddev/run-phpstorm.sh",
-            "chmod 755 ../../../.ddev/uk-site-install.sh"
-        ]
     }
 }
