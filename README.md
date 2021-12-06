@@ -16,7 +16,7 @@ If you need to modify any of the skaffolded files this package implements then y
 to 
 
 `    "require-dev": {
-	"uky-web/uky_platform_dev_tools": "v1.0.0-custom"
+	"uky-web/uky_platform_dev_tools": "dev-custom"
     },
 `
 
