@@ -13,9 +13,9 @@ if [ -f "reference/sanitized.sql" ]
     ddev drush cr
     ddev drush user:create admin --password="admin"
     ddev drush urol "administrator" admin
-    if [ -f "reference/siteurl.txt" ]
+    if [ -f "reference/.siteurl" ]
       then
-        file="reference/siteurl.txt"
+        file="reference/.siteurl"
         siteurl=$(cat "$file")
         ddev drush en stage_file_proxy
         ddev drush cr
