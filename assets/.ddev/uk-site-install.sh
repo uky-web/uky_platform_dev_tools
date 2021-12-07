@@ -1,4 +1,3 @@
-
 # Import the reference DB
 if [ -f "reference/sanitized.sql" ]
   then
@@ -14,7 +13,17 @@ if [ -f "reference/sanitized.sql" ]
     ddev drush cr
     ddev drush user:create admin --password="admin"
     ddev drush urol "administrator" admin
-
+    if [ -f "reference/siteurl.txt" ]
+      then
+        file="reference/siteurl.txt"
+        siteurl=$(cat "$file")
+        ddev drush en stage_file_proxy
+        ddev drush cr
+        ddev drush config-set stage_file_proxy.settings origin $siteurl -y
+        ddev drush config-set stage_file_proxy.settings hotlink true -y
+        ddev drush cr
+        echo "Stage File Proxy enabled and configured..."
+    fi
   else
     echo "No reference database found. Running site-install..."
      ddev drush si -y --account-pass=admin --site-name='ddev_gitpod' uky_base
