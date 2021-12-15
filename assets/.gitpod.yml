@@ -6,12 +6,11 @@ image:
 tasks:
   - name: Terminal
     init: |
-      export DDEV_NONINTERACTIVE=true
-      .ddev/gitpod-setup-ddev.sh
+      ddev start
       ddev composer install
       .ddev/uk-site-install.sh
     command: |
-      .ddev/gitpod-setup-ddev.sh
+      ddev start
       ddev composer install
       gp await-port 8080 && gp preview $(gp url 8080)
 
@@ -23,10 +22,6 @@ vscode:
     - ziyasal.vscode-open-in-github
 
 ports:
-  # Used by projector
-  - port: 6942
-    onOpen: ignore
-    visibility: private
   # Direct-connect ddev-webserver port that is the main port
   - port: 8080
     onOpen: ignore
