@@ -6,11 +6,11 @@ image:
 tasks:
   - name: Terminal
     init: |
-      ddev start
+      ddev start -y
       ddev composer install
       .ddev/uk-site-install.sh
     command: |
-      ddev start
+      ddev start -y
       ddev composer install
       gp await-port 8080 && gp preview $(gp url 8080)
 
