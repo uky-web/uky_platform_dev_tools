@@ -67,9 +67,6 @@
                 "[project-root]/.ddev/config.yaml": {
                     "path": "assets/.ddev/config.yaml"
                 },
-                "[project-root]/.ddev/gitpod-setup-ddev.sh": {
-                    "path": "assets/.ddev/gitpod-setup-ddev.sh"
-                },
                 "[project-root]/.ddev/run-phpstorm.sh": {
                     "path": "assets/.ddev/run-phpstorm.sh"
                 },
