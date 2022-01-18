@@ -93,6 +93,10 @@
                 },
                 "[project-root]/.lando.yml": {
                     "path": "assets/.lando.yml"
+                },
+                "[project-root]/reference/.siteurl": {
+                    "path": "assets/.siteurl",
+                    "overwrite": false
                 }
             }
         }
