@@ -97,6 +97,15 @@
                 "[project-root]/reference/.siteurl": {
                     "path": "assets/.siteurl",
                     "overwrite": false
+                },
+                "[project-root]/scripts/local_packages/local_packages.sh": {
+                    "path": "assets/scripts/local_packages/local_packages.sh"
+                },
+                "[project-root]/scripts/local_packages/local_packages.yaml": {
+                    "path": "assets/scripts/local_packages/local_packages.yaml"
+                },
+                "[project-root]/scripts/local_packages/parse_yaml.sh": {
+                    "path": "assets/scripts/local_packages/parse_yaml.sh"
                 }
             }
         }
