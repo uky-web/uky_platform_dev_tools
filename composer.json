@@ -27,6 +27,7 @@
     "prefer-stable": true,
     "require": {
         "drupal/stage_file_proxy": "^1.1",
+        "drupal/twig_xdebug": "^1.2",
         "drupal/devel": "^4.0"
     },
     "require-dev": {
