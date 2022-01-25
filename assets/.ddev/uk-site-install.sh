@@ -17,6 +17,8 @@ if [ -f "reference/sanitized.sql" ]
       then
         file="reference/.siteurl"
         siteurl=$(cat "$file")
+        ddev composer update
+        ddev drush cr
         ddev drush en stage_file_proxy
         ddev drush cr
         ddev drush config-set stage_file_proxy.settings origin $siteurl -y
