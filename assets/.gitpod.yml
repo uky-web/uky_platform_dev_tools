@@ -51,7 +51,7 @@ ports:
     onOpen: ignore
     visibility: private
   # xdebug port
-  - port: 9003
+  - port: 9000
     onOpen: ignore
     visibility: private
   # projector port
