@@ -21,9 +21,10 @@ if [ -f "reference/sanitized.sql" ]
         siteurl=$(cat "$file")
         ddev drush cr
         ddev drush en stage_file_proxy
-        ddev drush cr
+        ddev drush cex -y
         ddev drush config-set stage_file_proxy.settings origin $siteurl -y
         ddev drush config-set stage_file_proxy.settings hotlink true -y
+        ddev drush cim -y
         ddev drush cr
         echo "Stage File Proxy enabled and configured..."
     fi
