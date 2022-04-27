@@ -9,12 +9,6 @@ if [ -f "reference/sanitized.sql" ]
         cp web/sites/default/default.settings.php web/sites/default/settings.php
     fi
     ddev drush cr
-    ddev drush cim -y
-    ddev drush cr
-    composer update
-    ddev drush cr
-    ddev drush user:create admin --password="admin"
-    ddev drush urol "administrator" admin
     if [ -f "reference/.siteurl" ]
       then
         file="reference/.siteurl"
@@ -27,6 +21,12 @@ if [ -f "reference/sanitized.sql" ]
         ddev drush cr
         echo "Stage File Proxy enabled and configured..."
     fi
+    ddev drush cim -y
+    ddev drush cr
+    composer update
+    ddev drush cr
+    ddev drush user:create admin --password="admin"
+    ddev drush urol "administrator" admin
   else
     echo "No reference database found. Running site-install..."
      ddev drush si -y --account-pass=admin --site-name='ddev_gitpod' uky_base
