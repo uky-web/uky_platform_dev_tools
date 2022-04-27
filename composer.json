@@ -100,7 +100,7 @@
                     "overwrite": false
                 },
                 "[project-root]/config/sync/stage_file_proxy.settings.yml": {
-                    "path": "assets/stage_file_proxy.settings.yml",
+                    "path": "assets/stage_file_proxy.settings.yml"
                 },
                 "[project-root]/scripts/local_packages/local_packages.sh": {
                     "path": "assets/scripts/local_packages/local_packages.sh"
