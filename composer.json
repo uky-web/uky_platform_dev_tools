@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://satis.uky.dev"
+            "url": "https://composer.uky.dev"
         },
         {
             "type": "composer",
