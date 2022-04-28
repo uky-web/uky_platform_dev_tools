@@ -7,13 +7,13 @@ tasks:
   - name: Terminal
     init: |
       ddev start -y
-      ddev composer config allow-plugins true
-      ddev composer update
+      composer config allow-plugins true
+      composer update
       .ddev/uk-site-install.sh
     command: |
       ddev start -y
-      ddev composer config allow-plugins true
-      ddev composer update
+      composer config allow-plugins true
+      composer update
       gp await-port 8080 && gp preview $(gp url 8080)
 
 # VScode xdebug extension
