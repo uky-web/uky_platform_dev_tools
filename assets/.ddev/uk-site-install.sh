@@ -25,8 +25,6 @@ if [ -f "reference/sanitized.sql" ]
         echo "Stage File Proxy enabled and configured..."
     fi
     ddev drush cr
-    composer update
-    ddev drush cr
     ddev drush user:create admin --password="admin"
     ddev drush urol "administrator" admin
   else
