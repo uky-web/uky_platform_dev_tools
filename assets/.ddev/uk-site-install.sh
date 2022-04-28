@@ -8,7 +8,10 @@ if [ -f "reference/sanitized.sql" ]
         echo "Generating settings.php file..."
         cp web/sites/default/default.settings.php web/sites/default/settings.php
     fi
+    mv config/sync/stage_file_proxy.settings.yml config/
+    ddev drush cim -y
     ddev drush cr
+    mv config/stage_file_proxy.settings.yml config/sync/
     if [ -f "reference/.siteurl" ]
       then
         file="reference/.siteurl"
@@ -21,7 +24,6 @@ if [ -f "reference/sanitized.sql" ]
         ddev drush cr
         echo "Stage File Proxy enabled and configured..."
     fi
-    ddev drush cim -y
     ddev drush cr
     composer update
     ddev drush cr
