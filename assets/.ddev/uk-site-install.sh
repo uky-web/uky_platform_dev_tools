@@ -12,19 +12,26 @@ if [ -f "reference/sanitized.sql" ]
     ddev drush cr
     ddev drush cim -y
     ddev drush cr
+    ddev drush en stage_file_proxy
+    ddev drush cex -y
     mv config/stage_file_proxy.settings.yml config/sync/
-    if [ -f "reference/.siteurl" ]
-      then
-        file="reference/.siteurl"
-        siteurl=$(cat "$file")
-        ddev drush cr
-        ddev drush en stage_file_proxy
-        ddev drush cr
-        ddev drush config-set stage_file_proxy.settings origin $siteurl -y
-        #ddev drush config-set stage_file_proxy.settings hotlink true -y
-        ddev drush cr
-        echo "Stage File Proxy enabled and configured..."
-    fi
+    ddev drush cr
+    ddev drush config-set stage_file_proxy.settings origin $siteurl -y
+    ddev drush cr
+    echo "Stage File Proxy enabled and configured..."
+    #if [ -f "reference/.siteurl" ]
+    #  then
+    #    file="reference/.siteurl"
+    #    siteurl=$(cat "$file")
+    #    ddev drush cr
+    #    ddev drush en stage_file_proxy
+    #    ddev drush cex
+    #    ddev drush cr
+    #    ddev drush config-set stage_file_proxy.settings origin $siteurl -y
+    #    #ddev drush config-set stage_file_proxy.settings hotlink true -y
+    #    ddev drush cr
+    #    echo "Stage File Proxy enabled and configured..."
+    #fi
     ddev drush cr
     ddev drush user:create admin --password="admin"
     ddev drush urol "administrator" admin
