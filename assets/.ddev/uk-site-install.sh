@@ -9,6 +9,7 @@ if [ -f "reference/sanitized.sql" ]
         cp web/sites/default/default.settings.php web/sites/default/settings.php
     fi
     mv config/sync/stage_file_proxy.settings.yml config/
+    ddev drush cr
     ddev drush cim -y
     ddev drush cr
     mv config/stage_file_proxy.settings.yml config/sync/
