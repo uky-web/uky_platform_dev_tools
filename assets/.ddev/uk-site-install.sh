@@ -17,6 +17,8 @@ if [ -f "reference/sanitized.sql" ]
     mv config/stage_file_proxy.settings.yml config/sync/
     ddev drush cr
     ddev drush cim -y
+    file="reference/.siteurl"
+    siteurl=$(cat "$file")
     ddev drush config-set stage_file_proxy.settings origin $siteurl -y
     ddev drush cr
     echo "Stage File Proxy enabled and configured..."
