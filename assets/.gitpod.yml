@@ -3,9 +3,7 @@ image: drud/ddev-gitpod-base:latest
 tasks:
   - name: ddev-gitpod-launcher
     init: |
-      cd /tmp && ddev config --auto
-      ddev debug download-images
-      ddev delete -Oy tmp
+      ddev start -y
       ddev composer config allow-plugins true
       ddev composer install
       .ddev/uk-site-install.sh
