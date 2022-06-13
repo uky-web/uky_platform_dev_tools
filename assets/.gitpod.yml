@@ -1,64 +1,63 @@
-image:
-  file: .gitpod.Dockerfile
+image: drud/ddev-gitpod-base:latest
 
-# ddev and composer are running as part of the prebuild
-# when starting a workspace all docker images are ready
 tasks:
-  - name: Terminal
+  - name: ddev-gitpod-launcher
     init: |
       ddev start -y
-      composer config allow-plugins true
-      composer install
+      ddev composer config allow-plugins true
+      ddev composer install
       .ddev/uk-site-install.sh
     command: |
       ddev start -y
-      composer config allow-plugins true
-      composer install
       gp await-port 8080 && gp preview $(gp url 8080)
 
 # VScode xdebug extension
 vscode:
   extensions:
+    # PHP extension
     - felixfbecker.php-debug
     - bmewburn.vscode-intelephense-client
     - ziyasal.vscode-open-in-github
 
+    # Bash extensions
+    - timonwong.shellcheck
+    - rogalmic.bash-debug
+
 ports:
+  # Ignore direct-build https port
+  - port: 2222
+    onOpen: ignore
+  - port: 3306
+    onOpen: ignore
+  # Used by projector
+  - port: 6942
+    onOpen: ignore
   # Direct-connect ddev-webserver port that is the main port
   - port: 8080
     onOpen: ignore
-    visibility: private
   # Currently un-notified and unsupported mailhog http port
   - port: 8025
     onOpen: ignore
-    visibility: private
   # Currently un-notified and unsupported mailhog https port
   - port: 8026
     onOpen: ignore
-    visibility: private
   # Currently un-notified and unsupported phpmyadmin http port
   - port: 8036
     onOpen: ignore
-    visibility: private
   # Currently un-notified and unsupported phpmyadmin https port
   - port: 8037
     onOpen: ignore
-    visibility: private
   # router http port that we're ignoring.
   - port: 8888
     onOpen: ignore
-    visibility: private
   # router https port that we're ignoring.
   - port: 8889
     onOpen: ignore
-    visibility: private
   # xdebug port
-  - port: 9000
+  - port: 9003
     onOpen: ignore
-    visibility: private
   # projector port
   - port: 9999
-    visibility: private
 
 github:
   prebuilds:
