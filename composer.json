@@ -59,9 +59,6 @@
                 "[web-root]/sites/development.services.yml": {
                     "path": "assets/development.services.yml"
                 },
-                "[project-root]/.gitpod.Dockerfile": {
-                    "path": "assets/.gitpod.Dockerfile"
-                },
                 "[project-root]/.gitpod.yml": {
                     "path": "assets/.gitpod.yml"
                 },
