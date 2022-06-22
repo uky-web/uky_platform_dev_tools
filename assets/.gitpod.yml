@@ -4,7 +4,13 @@ tasks:
   - name: ddev-gitpod-launcher
     init: |
       ddev start -y
-      ddev composer config allow-plugins true
+      ddev composer global config allow-plugins true
+      ddev composer config allow-plugins.composer/installers true
+      ddev composer config allow-plugins.drupal/core-composer-scaffold true
+      ddev composer config allow-plugins.cweagans/composer-patches true
+      ddev composer config allow-plugins.zaporylie/composer-drupal-optimizations true
+      ddev composer config allow-plugins.drupal/console-extend-plugin true
+      ddev composer config allow-plugins.oomphinc/composer-installers-extender true
       ddev composer install
       .ddev/uk-site-install.sh
     command: |
