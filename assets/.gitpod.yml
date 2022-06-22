@@ -4,7 +4,6 @@ tasks:
   - name: ddev-gitpod-launcher
     init: |
       ddev start -y
-      ddev composer config allow-plugins true
       ddev composer install
       .ddev/uk-site-install.sh
     command: |
