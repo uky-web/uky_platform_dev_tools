@@ -63,7 +63,7 @@ for f in $packages_ ;
         package_composer_name=${f}_composername
 
         #Add the package as a dependency
-        ddev composer require --no-update -vvv --dev "'${!package_name}:${!package_composer_name} as ${!package_version}'"       
+        ddev composer require --no-update -vvv --dev "${!package_name}:${!package_composer_name} as ${!package_version}"       
 
 done
 
