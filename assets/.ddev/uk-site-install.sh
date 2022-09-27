@@ -1,3 +1,5 @@
+#!/bin/bash
+set -e
 # Import the reference DB
 if [ -f "reference/sanitized.sql" ]
   then
