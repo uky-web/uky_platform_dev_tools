@@ -26,7 +26,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "drupal/stage_file_proxy": "^1.1",
+        "drupal/stage_file_proxy": "^2.0.2",
         "drupal/twig_xdebug": "^1.2",
         "drupal/devel": "^4.0"
     },
