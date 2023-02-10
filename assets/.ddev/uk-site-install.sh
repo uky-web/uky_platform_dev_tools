@@ -43,9 +43,4 @@ if [ -f "reference/sanitized.sql" ]
   else
     echo "No reference database found. Running site-install..."
      ddev drush si -y --account-pass=admin --site-name='ddev_gitpod' uky_base
-     ddev drush theme:enable claro
-     ddev drush config:set system.theme admin claro --yes
-     ddev drush theme:uninstall seven
-     ddev drush cr
-
 fi
