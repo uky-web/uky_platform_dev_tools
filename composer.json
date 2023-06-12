@@ -71,6 +71,9 @@
                 "[project-root]/.ddev/uk-site-install.sh": {
                     "path": "assets/.ddev/uk-site-install.sh"
                 },
+                "[project-root]/.devcontainer/devcontainer.json": {
+                    "path": "assets/.devcontainer/devcontainer.json"
+                },
                 "[project-root]/.theia/launch.json": {
                     "path": "assets/.theia/launch.json"
                 },
