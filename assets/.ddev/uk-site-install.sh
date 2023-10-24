@@ -10,6 +10,7 @@ if [ -f "reference/sanitized.sql" ]
         echo "Generating settings.php file..."
         cp web/sites/default/default.settings.php web/sites/default/settings.php
     fi
+    chmod +x scripts/local_packages/local_packages.sh
     mv config/sync/stage_file_proxy.settings.yml config/
     ddev drush cr
     ddev drush cim -y
