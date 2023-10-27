@@ -9,6 +9,8 @@ if [ -f "reference/sanitized.sql" ]
     ddev import-db --src=reference/sanitized.sql
     # gzip the reference DB
     gzip reference/sanitized.sql
+    # discard changes to gzip reference DB
+    git checkout reference/sanitized.sql.gz
     if ! [ -f "web/sites/default/settings.php" ]
       then
         echo "Generating settings.php file..."
