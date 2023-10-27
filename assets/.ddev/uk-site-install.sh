@@ -31,19 +31,8 @@ if [ -f "reference/sanitized.sql" ]
     ddev drush config-set stage_file_proxy.settings origin $siteurl -y
     ddev drush cr
     echo "Stage File Proxy enabled and configured..."
-    #if [ -f "reference/.siteurl" ]
-    #  then
-    #    file="reference/.siteurl"
-    #    siteurl=$(cat "$file")
-    #    ddev drush cr
-    #    ddev drush en stage_file_proxy
-    #    ddev drush cex
-    #    ddev drush cr
-    #    ddev drush config-set stage_file_proxy.settings origin $siteurl -y
-    #    #ddev drush config-set stage_file_proxy.settings hotlink true -y
-    #    ddev drush cr
-    #    echo "Stage File Proxy enabled and configured..."
-    #fi
+    # discard changes to core.extension.yml so stage_file_proxy being enabled doesn't get committed.
+    git checkout config/sync/core.extension.yml
     ddev drush cr
     ddev drush user:create admin --password="admin"
     ddev drush urol "administrator" admin
