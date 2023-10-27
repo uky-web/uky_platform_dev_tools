@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 # Unzip the reference DB
-gunzip reference/sanitized.sql
+gunzip reference/sanitized.sql.gz
 # Import the reference DB
 if [ -f "reference/sanitized.sql" ]
   then
