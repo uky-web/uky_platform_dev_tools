@@ -7,6 +7,8 @@ if [ -f "reference/sanitized.sql" ]
   then
     echo "Reference database found. Importing..."
     ddev import-db --src=reference/sanitized.sql
+    # gzip the reference DB
+    gzip reference/sanitized.sql
     if ! [ -f "web/sites/default/settings.php" ]
       then
         echo "Generating settings.php file..."
