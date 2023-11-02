@@ -1,11 +1,12 @@
 #!/bin/bash
 set -e
-# Unzip the reference DB
-gunzip reference/sanitized.sql.gz
+
 # Import the reference DB
 if [ -f "reference/sanitized.sql" ]
   then
     echo "Reference database found. Importing..."
+    # Unzip the reference DB
+    gunzip reference/sanitized.sql.gz
     ddev import-db --src=reference/sanitized.sql
     # gzip the reference DB
     gzip reference/sanitized.sql
