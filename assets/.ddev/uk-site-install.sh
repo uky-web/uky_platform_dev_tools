@@ -2,7 +2,7 @@
 set -e
 
 # Import the reference DB
-if [ -f "reference/sanitized.sql" ]
+if [ -f "reference/sanitized.sql.gz" ]
   then
     echo "Reference database found. Importing..."
     # Unzip the reference DB
