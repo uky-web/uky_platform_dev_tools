@@ -63,7 +63,8 @@
                     "path": "assets/.gitpod.yml"
                 },
                 "[project-root]/.ddev/config.yaml": {
-                    "path": "assets/.ddev/config.yaml"
+                    "path": "assets/.ddev/config.yaml",
+                    "overwrite": false
                 },
                 "[project-root]/.ddev/run-phpstorm.sh": {
                     "path": "assets/.ddev/run-phpstorm.sh"
