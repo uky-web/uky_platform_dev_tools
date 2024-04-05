@@ -15,7 +15,7 @@ tasks:
       .ddev/uk-site-install.sh
     command: |
       ddev start -y
-      gp ports await 8080 && gp preview $(gp url 8080)
+      gp await-port 8080 && gp preview $(gp url 8080)
 
 # VScode xdebug extension
 vscode:

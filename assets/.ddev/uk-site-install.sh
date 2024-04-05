@@ -39,5 +39,5 @@ if [ -f "reference/sanitized.sql.gz" ]
     ddev drush urol "administrator" admin
   else
     echo "No reference database found. Running site-install..."
-     ddev drush si -y --account-pass=admin --site-name='ddev_gitpod' uky_base
+     ddev drush si -y --account-pass=admin --site-name='uky_base' uky_base
 fi
