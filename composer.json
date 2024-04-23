@@ -1,7 +1,7 @@
 {
     "name": "uky-web/uky_platform_dev_tools",
     "description": "This is used to install the development tools for the uky web platform.",
-    "type": "uky-web-module",
+    "type": "uky-dev-tools",
     "license": "MIT",
     "authors": [
         {
