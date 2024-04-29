@@ -41,4 +41,5 @@ if [ -f "reference/sanitized.sql.gz" ]
   else
     echo "No reference database found. Running site-install..."
      ddev drush si -y --account-pass=admin --site-name='uky_base' uky_base
+     ddev drush php-eval 'node_access_rebuild();'
 fi
