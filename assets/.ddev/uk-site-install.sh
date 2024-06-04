@@ -29,9 +29,13 @@ if [ -f "reference/sanitized.sql.gz" ]
     ddev drush cim -y
     file="reference/.siteurl"
     siteurl=$(cat "$file")
-    ddev drush config-set stage_file_proxy.settings origin $siteurl -y
-    ddev drush cr
-    echo "Stage File Proxy enabled and configured..."
+    if [ -s "$file" ]; then
+        ddev drush config-set stage_file_proxy.settings origin $siteurl -y
+        ddev drush cr
+        echo "Stage File Proxy enabled and configured..."
+    else
+        echo ".siteurl file is empty. Skipping configuration..."
+    fi
     # discard changes to core.extension.yml so stage_file_proxy being enabled doesn't get committed.
     git checkout config/sync/core.extension.yml
     ddev drush cr
