@@ -92,8 +92,8 @@
                 "[project-root]/.lando/scripts/lando-install.sh": {
                     "path": "assets/.lando/scripts/lando-install.sh"
                 },
-                "[project-root]/.lando.yml": {
-                    "path": "assets/.lando.yml"
+                "[project-root]/.lando.base.yml": {
+                    "path": "assets/.lando.base.yml"
                 },
                 "[project-root]/reference/.siteurl": {
                     "path": "assets/.siteurl",
