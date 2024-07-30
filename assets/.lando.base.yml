@@ -1,7 +1,7 @@
 name: project-template
 recipe: drupal10
 config:
-  php: '8.1'
+  php: '8.3'
   webroot: web
   composer_version: 2-latest
   via: apache:2.4
@@ -19,8 +19,6 @@ services:
       environment:
         PHP_IDE_CONFIG: "serverName=appserver"
         DRUPAL_ENV: "lando"
-  database:
-    portforward: 58698
 
 tooling:
   site-install:
