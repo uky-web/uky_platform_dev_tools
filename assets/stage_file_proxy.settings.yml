@@ -1,4 +1,4 @@
-hotlink: true
+hotlink: false
 origin: ''
 origin_dir: sites/default/files
 use_imagecache_root: false
