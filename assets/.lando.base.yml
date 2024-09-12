@@ -36,3 +36,10 @@ tooling:
       - composer update "drupal/*" drush/drush -W
       - drush updatedb
       - drush cr
+  reset-admin:
+    service: appserver
+    description: Sets the admin account username/password to "admin:admin" for local dev
+    cmd:
+      - drush sql-query "UPDATE users_field_data SET name='admin' WHERE uid=1";
+      - drush user:password admin "admin"
+      - drush cr
