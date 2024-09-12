@@ -22,9 +22,12 @@ services:
 
 tooling:
   site-install:
-    service: appserver
     description: Runs composer install and drush site-install
-    cmd: /app/.lando/scripts/lando-install.sh
+    dir: /app
+    cmd:
+      - appserver: composer install
+      - database: .lando/scripts/lando-install-db.sh
+      - appserver: .lando/scripts/lando-install.sh
   app-update:
     service: appserver
     description: Updates outdated Drupal core and installed modules
