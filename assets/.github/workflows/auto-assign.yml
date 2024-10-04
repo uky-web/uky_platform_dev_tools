@@ -1,0 +1,23 @@
+name: Auto Assign Pull Requests
+
+on:
+  pull_request:
+    branches:
+      - env-webcom
+    types: [opened]
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-assign Pull Request
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const assignees = ['jrul222'];
+            github.rest.issues.addAssignees({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              assignees: assignees,
+            });

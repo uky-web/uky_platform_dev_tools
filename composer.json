@@ -113,9 +113,6 @@
                     "path": "assets/.siteurl",
                     "overwrite": false
                 },
-                "[project-root]/config/sync/stage_file_proxy.settings.yml": {
-                    "path": "assets/stage_file_proxy.settings.yml"
-                },
                 "[project-root]/scripts/local_packages/local_packages.sh": {
                     "path": "assets/scripts/local_packages/local_packages.sh",
                     "overwrite": false
@@ -127,6 +124,12 @@
                 "[project-root]/scripts/local_packages/parse_yaml.sh": {
                     "path": "assets/scripts/local_packages/parse_yaml.sh",
                     "overwrite": false
+                },
+                "[project-root]/config/sync/stage_file_proxy.settings.yml": {
+                    "path": "assets/stage_file_proxy.settings.yml"
+                },
+                "[project-root]/.github/workflows/auto-assign.yml": {
+                    "path": "assets/.github/workflows/auto-assign.yml"
                 }
             }
         }
