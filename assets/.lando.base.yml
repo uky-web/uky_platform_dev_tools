@@ -22,9 +22,12 @@ services:
 
 tooling:
   site-install:
-    service: appserver
     description: Runs composer install and drush site-install
-    cmd: /app/.lando/scripts/lando-install.sh
+    dir: /app
+    cmd:
+      - appserver: composer install
+      - database: .lando/scripts/lando-install-db.sh
+      - appserver: .lando/scripts/lando-install.sh
   app-update:
     service: appserver
     description: Updates outdated Drupal core and installed modules
@@ -32,4 +35,11 @@ tooling:
     cmd:
       - composer update "drupal/*" drush/drush -W
       - drush updatedb
+      - drush cr
+  reset-admin:
+    service: appserver
+    description: Sets the admin account username/password to "admin:admin" for local dev
+    cmd:
+      - drush sql-query "UPDATE users_field_data SET name='admin' WHERE uid=1";
+      - drush user:password admin "admin"
       - drush cr
