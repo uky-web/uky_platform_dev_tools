@@ -130,6 +130,9 @@
                 },
                 "[project-root]/.github/workflows/auto-assign.yml": {
                     "path": "assets/.github/workflows/auto-assign.yml"
+                },
+                "[project-root]/.github/workflows/cex.yml": {
+                    "path": "assets/.github/workflows/cex.yml"
                 }
             }
         }
