@@ -1,4 +1,4 @@
-name: Developer: Config Export from env-webcom
+name: Developer - Config Export from env-webcom
 
 on:
   workflow_dispatch:
