@@ -1,13 +1,14 @@
-name: Auto Assign Pull Requests
+name: Webcom - Auto Assign Pull Requests
 
 on:
   pull_request:
     branches:
       - env-webcom
-    types: [opened]
+    types: [opened, ready_for_review]
 
 jobs:
   auto-assign:
+    if: ${{ !github.event.pull_request.draft }}
     runs-on: ubuntu-latest
     steps:
       - name: Auto-assign Pull Request
