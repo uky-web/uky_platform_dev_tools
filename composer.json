@@ -133,6 +133,9 @@
                 },
                 "[project-root]/.github/workflows/cex.yml": {
                     "path": "assets/.github/workflows/cex.yml"
+                },
+                "[project-root]/.github/workflows/sqlsan.yml": {
+                    "path": "assets/.github/workflows/sqlsan.yml"
                 }
             }
         }

@@ -1,11 +1,11 @@
-name: Developer - Config Export from env-webcom
+name: Developer - Sanitized database and Config Export from env-webcom
 
 on:
   workflow_dispatch:
 
 jobs:
   run-script:
-    runs-on: [self-hosted, general]
+    runs-on: [self-hosted, sqlsan-runner]
 
     steps:
     - name: Checkout repository
@@ -21,9 +21,9 @@ jobs:
     - name: Set username
       run: echo "USER_NAME=${{ github.actor }}" >> $GITHUB_ENV
 
-    - name: Run config export script
+    - name: Run Sanitized database and config export script
       run: |
-        /var/www/scripts/call_remote_cex.sh
+        /var/www/scripts/call_remote_sqlsan.sh
       env:
         DIRECTORY_NAME: ${{ env.REPO_PREFIX }}
         USER_NAME: ${{ env.USER_NAME }}
