@@ -5,7 +5,7 @@ on:
 
 jobs:
   run-script:
-    runs-on: self-hosted
+    runs-on: [self-hosted, general]
 
     steps:
     - name: Checkout repository
