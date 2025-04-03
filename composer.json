@@ -77,6 +77,10 @@
                     "path": "assets/.ddev/uk-site-install.sh",
                     "overwrite": false
                 },
+                "[project-root]/.ddev/php/php.ini": {
+                    "path": "assets/.ddev/php/php.ini",
+                    "overwrite": true
+                },
                 "[project-root]/.devcontainer/devcontainer.json": {
                     "path": "assets/.devcontainer/devcontainer.json",
                     "overwrite": true
