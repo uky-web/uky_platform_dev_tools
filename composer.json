@@ -63,7 +63,7 @@
                 },
                 "[project-root]/.gitpod.yml": {
                     "path": "assets/.gitpod.yml",
-                    "overwrite": false
+                    "overwrite": true
                 },
                 "[project-root]/.ddev/config.yaml": {
                     "path": "assets/.ddev/config.yaml",
