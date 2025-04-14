@@ -75,7 +75,11 @@
                 },
                 "[project-root]/.ddev/uk-site-install.sh": {
                     "path": "assets/.ddev/uk-site-install.sh",
-                    "overwrite": false
+                    "overwrite": true
+                },
+                "[project-root]/.ddev/ldap_servers.server.ukad.yml": {
+                    "path": "assets/.ddev/ldap_servers.server.ukad.yml",
+                    "overwrite": true
                 },
                 "[project-root]/.ddev/php/php.ini": {
                     "path": "assets/.ddev/php/php.ini",
