@@ -712,6 +712,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
         '^uky\.edu$',
         '^.+\.uky\.edu$',
         '^.+\.uky\.dev$',
+        '^.+\.app\.github\.dev$',
 ];
 */
 
