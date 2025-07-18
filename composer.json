@@ -87,11 +87,11 @@
                 },
                 "[project-root]/.devcontainer/devcontainer.json": {
                     "path": "assets/.devcontainer/devcontainer.json",
-                    "overwrite": false
+                    "overwrite": true
                 },
                 "[project-root]/.devcontainer/setup_project.sh": {
                     "path": "assets/.devcontainer/setup_project.sh",
-                    "overwrite": false
+                    "overwrite": true
                 },
                 "[project-root]/.theia/launch.json": {
                     "path": "assets/.theia/launch.json",
