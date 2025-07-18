@@ -1,23 +1,24 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/universal:3",
   "features": {
     "ghcr.io/ddev/ddev/install-ddev:latest": {}
   },
   "portsAttributes": {
-    "3306": {
-      "label": "database"
-    },
-    "8027": {
-      "label": "mailhog"
-    },
-    "8036": {
-      "label": "phpmyadmin"
-    },
-    "8080": {
-      "label": "web http"
+    "80": {
+      "label": "site__http",
+      "onAutoForward": "silent"
     },
     "8443": {
-      "label": "web https"
+      "label": "site__https",
+      "onAutoForward": "ignore"
+    },
+    "3306": {
+      "label": "site__db",
+      "onAutoForward": "ignore"
+    },
+    "8027": {
+      "label": "site__mailpit",
+      "onAutoForward": "ignore"
     }
   },
   "postCreateCommand": "bash .devcontainer/setup_project.sh",
