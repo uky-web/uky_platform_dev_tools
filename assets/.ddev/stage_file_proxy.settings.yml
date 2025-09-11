@@ -1,4 +1,4 @@
-hotlink: false
+hotlink: true
 origin: ''
 origin_dir: sites/default/files
 proxy_headers: ''

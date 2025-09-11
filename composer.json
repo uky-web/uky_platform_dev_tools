@@ -75,7 +75,7 @@
                 },
                 "[project-root]/.ddev/uk-site-install.sh": {
                     "path": "assets/.ddev/uk-site-install.sh",
-                    "overwrite": true
+                    "overwrite": false
                 },
                 "[project-root]/.ddev/ldap_servers.server.ukad.yml": {
                     "path": "assets/.ddev/ldap_servers.server.ukad.yml",
@@ -83,18 +83,14 @@
                 },
                 "[project-root]/.ddev/php/php.ini": {
                     "path": "assets/.ddev/php/php.ini",
-                    "overwrite": true
+                    "overwrite": false
                 },
                 "[project-root]/.devcontainer/devcontainer.json": {
                     "path": "assets/.devcontainer/devcontainer.json",
-                    "overwrite": true
+                    "overwrite": false
                 },
                 "[project-root]/.devcontainer/setup_project.sh": {
                     "path": "assets/.devcontainer/setup_project.sh",
-                    "overwrite": true
-                },
-                "[project-root]/.theia/launch.json": {
-                    "path": "assets/.theia/launch.json",
                     "overwrite": false
                 },
                 "[project-root]/.vscode/launch.json": {
@@ -103,22 +99,6 @@
                 },
                 "[web-root]/sites/default/settings.ddev.php": {
                     "path": "assets/settings.ddev.php",
-                    "overwrite": false
-                },
-                "[web-root]/sites/default/settings.lando.php": {
-                    "path": "assets/settings.lando.php",
-                    "overwrite": false
-                },
-                "[project-root]/.lando/config/php.ini": {
-                    "path": "assets/.lando/config/php.ini",
-                    "overwrite": false
-                },
-                "[project-root]/.lando/scripts/lando-install.sh": {
-                    "path": "assets/.lando/scripts/lando-install.sh",
-                    "overwrite": false
-                },
-                "[project-root]/.lando.base.yml": {
-                    "path": "assets/.lando.base.yml",
                     "overwrite": false
                 },
                 "[project-root]/reference/.siteurl": {
@@ -138,16 +118,20 @@
                     "overwrite": false
                 },
                 "[project-root]/config/sync/stage_file_proxy.settings.yml": {
-                    "path": "assets/stage_file_proxy.settings.yml"
+                    "path": "assets/.ddev/stage_file_proxy.settings.yml",
+                    "overwrite": true
                 },
                 "[project-root]/.github/workflows/auto-assign.yml": {
-                    "path": "assets/.github/workflows/auto-assign.yml"
+                    "path": "assets/.github/workflows/auto-assign.yml",
+                    "overwrite": true
                 },
                 "[project-root]/.github/workflows/cex.yml": {
-                    "path": "assets/.github/workflows/cex.yml"
+                    "path": "assets/.github/workflows/cex.yml",
+                    "overwrite": true
                 },
                 "[project-root]/.github/workflows/sqlsan.yml": {
-                    "path": "assets/.github/workflows/sqlsan.yml"
+                    "path": "assets/.github/workflows/sqlsan.yml",
+                    "overwrite": true
                 }
             }
         }
