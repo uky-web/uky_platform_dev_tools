@@ -1,4 +1,4 @@
-name: test-site
+name: dev-site
 type: drupal10
 docroot: web
 php_version: "8.3"
@@ -83,7 +83,7 @@ disable_settings_management: true
 # Please take care with this because it can cause great confusion.
 
 # upload_dir: custom/upload/dir
-# would set the destination path for ddev import-files to <docroot>/custom/upload/dir 
+# would set the destination path for ddev import-files to <docroot>/custom/upload/dir
 
 # working_dir:
 #   web: /var/www/html

@@ -1,123 +1,127 @@
 {
-    "name": "uky-web/uky_platform_dev_tools",
-    "description": "This is used to install the development tools for the uky web platform.",
-    "type": "uky-dev-tools",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "University of Kentucky Webcom",
-            "email": "universitywebservices@l.uky.edu"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.uky.dev"
-        },
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-            {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "drupal/stage_file_proxy": "^3.1.2",
-        "drupal/twig_xdebug": "^1.2",
-        "drupal/devel": "^5.1.1"
-    },
-    "require-dev": {
-        "drupal/drupal-extension": "^3.1",
-        "behat/mink": "~1.7",
-        "behat/mink-goutte-driver": "~1.2",
-        "jcalderonzumba/gastonjs": "~1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsstream": "~1.2",
-        "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "~2.8"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "@composer drupal:scaffold"
-            ],
-        "post-update-cmd": [
-            "@composer drupal:scaffold"
-        ]
-    },
-    "extra": {
-        "drupal-scaffold": {
-            "gitignore": false,
-            "overwrite": true,
-            "file-mapping": {
-                "[web-root]/sites/default/default.settings.php": {
-                    "path": "assets/default.settings.php",
-                    "overwrite": false
-                },
-                "[web-root]/sites/development.services.yml": {
-                    "path": "assets/development.services.yml",
-                    "overwrite": false
-                },
-                "[project-root]/.ddev/config.yaml": {
-                    "path": "assets/.ddev/config.yaml",
-                    "overwrite": false
-                },
-                "[project-root]/.ddev/run-phpstorm.sh": {
-                    "path": "assets/.ddev/run-phpstorm.sh",
-                    "overwrite": false
-                },
-                "[project-root]/.ddev/uk-site-install.sh": {
-                    "path": "assets/.ddev/uk-site-install.sh",
-                    "overwrite": false
-                },
-                "[project-root]/.ddev/ldap_servers.server.ukad.yml": {
-                    "path": "assets/.ddev/ldap_servers.server.ukad.yml",
-                    "overwrite": true
-                },
-                "[project-root]/.ddev/php/php.ini": {
-                    "path": "assets/.ddev/php/php.ini",
-                    "overwrite": false
-                },
-                "[project-root]/.devcontainer/devcontainer.json": {
-                    "path": "assets/.devcontainer/devcontainer.json",
-                    "overwrite": false
-                },
-                "[project-root]/.devcontainer/setup_project.sh": {
-                    "path": "assets/.devcontainer/setup_project.sh",
-                    "overwrite": false
-                },
-                "[project-root]/.vscode/launch.json": {
-                    "path": "assets/.vscode/launch.json",
-                    "overwrite": false
-                },
-                "[web-root]/sites/default/settings.ddev.php": {
-                    "path": "assets/settings.ddev.php",
-                    "overwrite": false
-                },
-                "[project-root]/reference/.siteurl": {
-                    "path": "assets/.siteurl",
-                    "overwrite": false
-                },
-                "[project-root]/config/sync/stage_file_proxy.settings.yml": {
-                    "path": "assets/.ddev/stage_file_proxy.settings.yml",
-                    "overwrite": true
-                },
-                "[project-root]/.github/workflows/auto-assign.yml": {
-                    "path": "assets/.github/workflows/auto-assign.yml",
-                    "overwrite": true
-                },
-                "[project-root]/.github/workflows/cex.yml": {
-                    "path": "assets/.github/workflows/cex.yml",
-                    "overwrite": true
-                },
-                "[project-root]/.github/workflows/sqlsan.yml": {
-                    "path": "assets/.github/workflows/sqlsan.yml",
-                    "overwrite": true
-                }
-            }
-        }
+  "name": "uky-web/uky_platform_dev_tools",
+  "description": "This is used to install the development tools for the uky web platform.",
+  "license": "MIT",
+  "type": "uky-dev-tools",
+  "version": "3.12.0",
+  "support": {
+    "source": "https://github.com/uky-web/uky_platform_dev_tools"
+  },
+  "authors": [
+    {
+      "name": "University of Kentucky Webcom",
+      "email": "universitywebservices@l.uky.edu"
     }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.uky.dev"
+    },
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "drupal/stage_file_proxy": "^3.1.2",
+    "drupal/twig_xdebug": "^1.2",
+    "drupal/devel": "^5.1.1"
+  },
+  "require-dev": {
+    "drupal/drupal-extension": "^3.1",
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "jcalderonzumba/gastonjs": "~1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+    "mikey179/vfsstream": "~1.2",
+    "phpunit/phpunit": "~4.8",
+    "symfony/css-selector": "~2.8"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@composer drupal:scaffold"
+    ],
+    "post-update-cmd": [
+      "@composer drupal:scaffold"
+    ]
+  },
+  "extra": {
+    "drupal-scaffold": {
+      "gitignore": false,
+      "overwrite": true,
+      "file-mapping": {
+        "[web-root]/sites/default/default.settings.php": {
+          "path": "assets/default.settings.php",
+          "overwrite": false
+        },
+        "[web-root]/sites/development.services.yml": {
+          "path": "assets/development.services.yml",
+          "overwrite": false
+        },
+        "[project-root]/.ddev/config.yaml": {
+          "path": "assets/.ddev/config.yaml",
+          "overwrite": false
+        },
+        "[project-root]/.ddev/run-phpstorm.sh": {
+          "path": "assets/.ddev/run-phpstorm.sh",
+          "overwrite": false
+        },
+        "[project-root]/.ddev/uk-site-install.sh": {
+          "path": "assets/.ddev/uk-site-install.sh",
+          "overwrite": false
+        },
+        "[project-root]/.ddev/ldap_servers.server.ukad.yml": {
+          "path": "assets/.ddev/ldap_servers.server.ukad.yml",
+          "overwrite": true
+        },
+        "[project-root]/.ddev/php/php.ini": {
+          "path": "assets/.ddev/php/php.ini",
+          "overwrite": false
+        },
+        "[project-root]/.devcontainer/devcontainer.json": {
+          "path": "assets/.devcontainer/devcontainer.json",
+          "overwrite": false
+        },
+        "[project-root]/.devcontainer/setup_project.sh": {
+          "path": "assets/.devcontainer/setup_project.sh",
+          "overwrite": false
+        },
+        "[project-root]/.vscode/launch.json": {
+          "path": "assets/.vscode/launch.json",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/settings.ddev.php": {
+          "path": "assets/settings.ddev.php",
+          "overwrite": false
+        },
+        "[project-root]/reference/.siteurl": {
+          "path": "assets/.siteurl",
+          "overwrite": false
+        },
+        "[project-root]/config/sync/stage_file_proxy.settings.yml": {
+          "path": "assets/.ddev/stage_file_proxy.settings.yml",
+          "overwrite": true
+        },
+        "[project-root]/.github/workflows/auto-assign.yml": {
+          "path": "assets/.github/workflows/auto-assign.yml",
+          "overwrite": true
+        },
+        "[project-root]/.github/workflows/cex.yml": {
+          "path": "assets/.github/workflows/cex.yml",
+          "overwrite": true
+        },
+        "[project-root]/.github/workflows/sqlsan.yml": {
+          "path": "assets/.github/workflows/sqlsan.yml",
+          "overwrite": true
+        }
+      }
+    }
+  }
 }
