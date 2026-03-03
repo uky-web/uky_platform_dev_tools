@@ -786,11 +786,6 @@ $settings['entity_update_backup'] = TRUE;
 #  include $app_root . '/' . $site_path . '/settings.local.php';
 #}
 
-# settings.lando.php include.
-if (getenv('DRUPAL_ENV') == 'lando') {
-   include $app_root . '/' . $site_path . '/settings.lando.php';
- }
-
 # settings.ddev.php include.
  if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {
   include __DIR__ . '/settings.ddev.php';

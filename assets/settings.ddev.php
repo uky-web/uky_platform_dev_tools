@@ -124,3 +124,22 @@ if (version_compare(DRUPAL::VERSION, "9.0.0", '>=') &&
   $settings['config_sync_directory'] = '../config/sync';
 }
 
+// This specifies the config split for ddev environments
+$config['config_split.config_split.ddev']['status'] = TRUE;
+
+// Disable SAML auto redirect locally.
+$config['samlauth.authentication']['login_auto_redirect'] = FALSE;
+
+// Remove SAML login link title locally.
+$config['samlauth.authentication']['login_link_title'] = '';
+
+
+
+
+
+
+
+# settings.ddev-custom.php include.
+ if (file_exists(__DIR__ . '/settings.ddev-custom.php') && getenv('IS_DDEV_PROJECT') == 'true') {
+  include __DIR__ . '/settings.ddev-custom.php';
+}

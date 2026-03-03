@@ -3,7 +3,7 @@
   "description": "This is used to install the development tools for the uky web platform.",
   "license": "MIT",
   "type": "uky-dev-tools",
-  "version": "3.12.2",
+  "version": "3.13.0",
   "support": {
     "source": "https://github.com/uky-web/uky_platform_dev_tools"
   },
@@ -77,10 +77,6 @@
           "path": "assets/.ddev/uk-site-install.sh",
           "overwrite": false
         },
-        "[project-root]/.ddev/ldap_servers.server.ukad.yml": {
-          "path": "assets/.ddev/ldap_servers.server.ukad.yml",
-          "overwrite": true
-        },
         "[project-root]/.ddev/php/php.ini": {
           "path": "assets/.ddev/php/php.ini",
           "overwrite": false
@@ -97,16 +93,24 @@
           "path": "assets/.vscode/launch.json",
           "overwrite": false
         },
-        "[web-root]/sites/default/settings.ddev.php": {
-          "path": "assets/settings.ddev.php",
-          "overwrite": false
-        },
         "[project-root]/reference/.siteurl": {
           "path": "assets/.siteurl",
           "overwrite": false
         },
+        "[web-root]/sites/default/settings.ddev-custom.php": {
+          "path": "assets/settings.ddev-custom.php",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/settings.ddev.php": {
+          "path": "assets/settings.ddev.php",
+          "overwrite": true
+        },
         "[project-root]/config/sync/stage_file_proxy.settings.yml": {
-          "path": "assets/.ddev/stage_file_proxy.settings.yml",
+          "path": "assets/.ddev/ddev-config-split/stage_file_proxy.settings.yml",
+          "overwrite": true
+        },
+        "[project-root]/.ddev/ldap_servers.server.ukad.yml": {
+          "path": "assets/.ddev/ddev-config-split/ldap_servers.server.ukad.yml",
           "overwrite": true
         },
         "[project-root]/.github/workflows/auto-assign.yml": {
