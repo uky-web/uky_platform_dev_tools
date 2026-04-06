@@ -133,6 +133,8 @@ $config['samlauth.authentication']['login_auto_redirect'] = FALSE;
 // Remove SAML login link title locally.
 $config['samlauth.authentication']['login_link_title'] = '';
 
+// Override r4032login settings for local DDEV development.
+$config['r4032login.settings']['user_login_path'] = '/user/login';
 
 
 
