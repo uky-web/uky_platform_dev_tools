@@ -137,6 +137,14 @@ $config['samlauth.authentication']['login_link_title'] = '';
 $config['r4032login.settings']['user_login_path'] = '/user/login';
 
 
+// Reverse Proxy settings for Codespaces (Stops the localhost:80 url from creeping up.)
+$settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy_addresses'] = ['0.0.0.0/0'];
+$settings['reverse_proxy_trusted_headers'] =
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR |
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST |
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO |
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT;
 
 
 
