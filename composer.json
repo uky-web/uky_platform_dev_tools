@@ -3,7 +3,7 @@
   "description": "This is used to install the development tools for the uky web platform.",
   "license": "MIT",
   "type": "uky-dev-tools",
-  "version": "3.15.0",
+  "version": "3.16.0",
   "support": {
     "source": "https://github.com/uky-web/uky_platform_dev_tools"
   },
