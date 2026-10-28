@@ -32,9 +32,16 @@ ddev composer config allow-plugins.cweagans/composer-patches true
 ddev composer config allow-plugins.zaporylie/composer-drupal-optimizations true
 ddev composer config allow-plugins.drupal/console-extend-plugin true
 ddev composer config allow-plugins.oomphinc/composer-installers-extender true
+ddev composer config allow-plugins.symfony/runtime true
 
-# Install dependencies
-ddev composer install
+# Install dependencies without running project scripts
+ddev composer install --no-scripts
+
+# Scaffold the latest platform files
+ddev composer drupal:scaffold
+
+# Run the project's post-install scripts
+ddev composer run-script post-install-cmd
 
 # Run additional setup script
 .ddev/uk-site-install.sh
